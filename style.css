@@ -1,0 +1,139 @@
+/* css reset  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+source {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+
+/* main css */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+  margin: 0 1rem;
+  color: hsl(228, 12%, 48%);
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  padding: 2.2em;
+  gap: 1rem;
+}
+
+#title {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 2rem;
+  color: hsl(212, 21%, 14%);
+}
+
+.sub-title {
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.price1 {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+
+.price2 {
+  text-decoration: line-through;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1em;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+  letter-spacing: 0.05rem;
+}
+
+button::before {
+  content: "";
+  background-image: url(images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
+}
+
+/* todo make the image height responsive on tablet screens watch other peoples projects */
+
+/* for desktop size 1440px the image needs work on images being responsive on tablet sizes*/
+@media only screen and (min-width: 600px) {
+  main {
+    display: flex;
+    max-width: 600px;
+    max-height: 800px;
+    line-height: 1em;
+  }
+  .content {
+    width: 90%;
+  }
+  button {
+    padding: 0;
+  }
+  p {
+    line-height: 1.5em;
+  }
+
+  picture {
+    overflow: hidden;
+  }
+}
